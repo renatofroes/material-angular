@@ -18,14 +18,16 @@
           </div>
           <form class="example-form">
             <div class="form-group">
-              <mat-form-field class="example-full-width" >
+              <mat-form-field appearance="outline" >
+                <mat-label>Seu email</mat-label>
                 <input matInput placeholder="Seu email" value="">
               </mat-form-field>
             </div>
 
             <div class="form-group">
-              <mat-form-field class="example-full-width">
-                <input type="password" matInput placeholder="Sua senha">
+              <mat-form-field appearance="outline" >
+                <mat-label>Sua senha</mat-label>
+                <input type="password" matInput placeholder="Sua senha" style="border-color: red;">
               </mat-form-field>
             </div>
              <button routerLink="/home" class="btn btn-primary btn-block">Entrar</button>

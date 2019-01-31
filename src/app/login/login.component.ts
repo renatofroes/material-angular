@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {NgModule} from '@angular/core';
 
+import { MatFormFieldModule } from '@angular/material/form-field'; 
 import { MatInputModule } from '@angular/material/input'; 
 import { FormControl, FormGroupDirective, NgForm, Validators } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
@@ -16,11 +17,13 @@ import { ErrorStateMatcher } from '@angular/material/core';
     FormControl, 
     FormGroupDirective, 
     NgForm, 
+    MatFormFieldModule,
     Validators, 
     ErrorStateMatcher 
   
   ],
-  exports: []
+  exports: [],
+
 })
 
 @Component({
@@ -29,7 +32,7 @@ import { ErrorStateMatcher } from '@angular/material/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
+  
  
   constructor() { }
 
