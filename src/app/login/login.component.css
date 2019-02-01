@@ -39,6 +39,15 @@
     color: rgb(61, 182, 136) !important;
 }
 
+.header-login .box-login .check-login {
+    margin-top: -30px;
+    margin-bottom: 20px;
+}
+
+::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background, .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+    background-color: rgb(29, 216, 160) !important;
+}
+
 .mat-focused .mat-form-field-wrapper {
     color: red !important;
 }
@@ -79,5 +88,6 @@ footer .footer-content .social-footer > li {
 }
 
 ::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
-    color: red!important;
+    color: rgb(61, 158, 182) !important;
+    box-shadow: 0 0 12px rgba(40, 230, 255, 0.589);
 }

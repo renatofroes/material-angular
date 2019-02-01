@@ -25,6 +25,6 @@ export class LoginComponent implements OnInit {
   }
 
   getErrorMessage() {
-    return this.email.hasError('required') ? 'Você precisa digitar um valor' : this.email.hasError('email') ? 'Não é um email valido' : '';
+    return this.email.hasError('required') ? 'Você precisa digitar um email cadastrado' : this.email.hasError('email') ? 'Não é um email valido' : '';
   }
 }

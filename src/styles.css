@@ -1,9 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
 @import '~bootstrap/dist/css/bootstrap.css';
-@import '../node_modules/font-awesome/css/font-awesome.css'
+@import '../node_modules/font-awesome/css/font-awesome.css';
  
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; 
+}
 
+/* Botões */
+.btn-tema {
+    border-radius: 14px;
+    background-color: rgb(24, 183, 223);
+    color: #fff;
+    padding: 10px 15px;
+}
+
+.btn-tema:hover {
+    background-color: rgb(14, 216, 189);
+    color: rgb(46, 119, 124)
+}
 
