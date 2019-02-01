@@ -1,29 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import {NgModule} from '@angular/core';
 
-import { MatFormFieldModule } from '@angular/material/form-field'; 
-import { MatInputModule } from '@angular/material/input'; 
-import { FormControl, FormGroupDirective, NgForm, Validators } from '@angular/forms';
-import { ErrorStateMatcher } from '@angular/material/core';
+import { FormControl, Validators } from '@angular/forms';
 
 
 @NgModule ({
   declarations: [
     Component,
     NgModule
-  ],
-  imports: [
-    MatInputModule, 
-    FormControl, 
-    FormGroupDirective, 
-    NgForm, 
-    MatFormFieldModule,
-    Validators, 
-    ErrorStateMatcher 
-  
-  ],
-  exports: [],
-
+  ]
 })
 
 @Component({
@@ -31,16 +16,15 @@ import { ErrorStateMatcher } from '@angular/material/core';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
+
 export class LoginComponent implements OnInit {
-  
- 
+  email = new FormControl('', [Validators.required, Validators.email]);
   constructor() { }
 
   ngOnInit() {
-    
-
   }
 
-  
-
+  getErrorMessage() {
+    return this.email.hasError('required') ? 'Você precisa digitar um valor' : this.email.hasError('email') ? 'Não é um email valido' : '';
+  }
 }

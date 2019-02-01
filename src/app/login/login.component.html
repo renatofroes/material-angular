@@ -20,7 +20,8 @@
             <div class="form-group">
               <mat-form-field appearance="outline" >
                 <mat-label><i class="fa fa-envelope" aria-hidden="true"></i> | Seu email</mat-label>
-                <input matInput placeholder="Seu email" value="">
+                <input matInput placeholder="Seu email"  [formControl]="email" required>
+                <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
               </mat-form-field>
             </div>
 
