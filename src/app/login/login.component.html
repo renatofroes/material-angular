@@ -28,7 +28,8 @@
             <div class="form-group">
               <mat-form-field appearance="outline" >
                 <mat-label><i class="fa fa-lock" aria-hidden="true"></i> | Sua senha</mat-label>
-                <input type="password" matInput placeholder="Sua senha" style="border-color: red;">
+                <input type="password" matInput placeholder="Sua senha" [formControl]="password" style="border-color: red;">
+                <mat-error class="color:red" *ngIf="password.invalid">{{getErrorMessage('password')}}</mat-error>
               </mat-form-field>
             </div>
             <div class="check-login">
@@ -37,7 +38,7 @@
             </div>
             
 
-             <button routerLink="/home" class="btn btn-tema btn-block">Entrar</button>
+             <button (click)="logar()" class="btn btn-tema btn-block">Entrar</button>
           </form>
 
 
